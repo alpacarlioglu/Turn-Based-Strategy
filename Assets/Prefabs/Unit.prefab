@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6021013290643358476}
   - component: {fileID: 6021013290643358477}
   - component: {fileID: 4641327327251100805}
+  - component: {fileID: 3678887570503890528}
+  - component: {fileID: 8576322545353355620}
   m_Layer: 7
   m_Name: Unit
   m_TagString: Untagged
@@ -47,8 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e2c3af58c4e1e48996c63980a54e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.8
-  unitAnimator: {fileID: 5970262870428572087}
 --- !u!65 &4641327327251100805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62,6 +62,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.70007706, y: 1.9100001, z: 0.4403823}
   m_Center: {x: 0.000019550323, y: 0.9, z: 0.013421804}
+--- !u!114 &3678887570503890528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6021013290643358483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e92d0330753b74bb4e1e6576f92b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  unitAnimator: {fileID: 5970262870428572087}
+  maxMoveDistance: 4
+--- !u!114 &8576322545353355620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6021013290643358483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218a1b55cc2b880418ea62f250452f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6190220379421557781
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6190220379421557781}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.011, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 0
   m_Children: []

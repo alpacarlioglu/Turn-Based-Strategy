@@ -13,6 +13,7 @@ public class UnitActionSystem : MonoBehaviour
 
     private Ray ray;
     private RaycastHit raycastHit;
+    private bool isBussy;
     
     private void Awake()
     {
@@ -27,14 +28,32 @@ public class UnitActionSystem : MonoBehaviour
 
     private void Update()
     {
-
+        if (isBussy) return;
+        
         if(Input.GetMouseButtonDown(0))
         {
             if (TryHandleUnitSelection()) return;
-            selectedUnit.Move(MouseWorld.GetPosition());
+
+            var mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorld.GetPosition());
+
+            if (selectedUnit.GetMoveAction().IsValidActionGridPosition(mouseGridPosition))
+            {
+                SetBusy();
+                selectedUnit.GetMoveAction().Move(mouseGridPosition, ClearBusy);
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            SetBusy();
+            selectedUnit.GetSpinAction().Spin(ClearBusy);
         }
     }
     
+    private void SetBusy() => isBussy = true;
+    
+    private void ClearBusy() => isBussy = false;
+
     private bool TryHandleUnitSelection()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);

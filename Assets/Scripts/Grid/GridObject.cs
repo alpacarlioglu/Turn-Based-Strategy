@@ -28,7 +28,7 @@ public class GridObject
    
    public override string ToString()
    {
-      string unitString = "";
+      var unitString = "";
       
       foreach (Unit unit in unitList)
       {
@@ -36,5 +36,10 @@ public class GridObject
       }
       
       return gridPosition.ToString() + "\n" + unitString ;
+   }
+
+   public bool HasAnyUnit()
+   {
+      return unitList.Count > 0;
    }
 }
