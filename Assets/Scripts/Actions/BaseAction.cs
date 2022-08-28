@@ -13,4 +13,18 @@ public abstract class BaseAction : MonoBehaviour
     {
         unit = GetComponent<Unit>();
     }
+
+    public abstract string GetActionName();
+    
+    public abstract void TakeAction(GridPosition gridPosition, Action onActionComplete);
+    
+    public virtual bool IsValidActionGridPosition(GridPosition gridPosition)
+    {
+        var validGridPosition = GetValidActionGridPositionList();
+        return validGridPosition.Contains(gridPosition);
+    }
+
+    public abstract List<GridPosition> GetValidActionGridPositionList();
+
+
 }

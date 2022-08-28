@@ -1232,7 +1232,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7770035, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea329420a7580044b1b6fd7954ef96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionButtonprefab: {fileID: 5826759457659419564, guid: 830641b271a91784ab63c95c063ba8ea,
+  actionButtonPrefab: {fileID: 5826759457659419564, guid: 830641b271a91784ab63c95c063ba8ea,
     type: 3}
   actionButtonContainerTransform: {fileID: 393337216}
 --- !u!1 &2069637046
